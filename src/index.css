@@ -1,1 +1,83 @@
 
+
+:root {
+  --clr-primary: #6366f1;
+  --clr-primary-light: #a5b4fc;
+  --clr-accent: #fcd34d;
+  --clr-bg: #f9fafb;
+  --clr-text: #1f2937;
+  --clr-muted: #6b7280;
+  --clr-border: #e5e7eb;
+
+  /* Font Family */
+  --ff-base: 'Inter', sans-serif;
+  --ff-heading: 'Poppins', sans-serif;
+
+  /* Font Sizes */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2rem;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 1rem;
+
+  /* Box Shadow */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ff-base);
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ff-heading);
+  font-weight: 600;
+  color: var(--clr-text);
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--ff-base);
+}
+
+/* Utility Classes */
+.btn {
+  background: var(--clr-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-base);
+  box-shadow: var(--shadow-md);
+  transition: background 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background: var(--clr-primary-light);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
