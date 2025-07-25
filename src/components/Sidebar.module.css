@@ -1,0 +1,81 @@
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  width: 300px;
+  top: 0;
+  left: 0;
+  background: #a5b4fc;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+
+.sidebarContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.logo {
+  width: 250px;
+  margin-bottom: 2rem;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.lists a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lists a:hover {
+  color: #f9fafb;
+  transition: 0.7s ease-in-out;
+}
+
+.collapsed {
+  width: 80px;
+  display: flex;
+}
+
+.collapsed .sidebarContainer {
+  margin-top: 1rem;
+}
+
+.collapsed .lists a span {
+  display: none;
+}
+
+.collapseBtn {
+  margin-top: auto;
+  align-self: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #333;
+  transition: transform 0.3s ease;
+}
+
+.collapseBtn:hover {
+  transform: scale(1.5);
+}

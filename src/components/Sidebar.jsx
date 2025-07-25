@@ -1,0 +1,51 @@
+import { useState } from "react";
+import styles from "./Sidebar.module.css";
+import {
+  MdSpaceDashboard,
+  MdToday,
+  MdViewWeek,
+  MdSettings,
+  MdChevronLeft,
+  MdChevronRight,
+} from "react-icons/md";
+import { navItems } from "../data/sidabar";
+const Sidebar = () => {
+  const [isCollapse, setIsCollapse] = useState(false);
+  const toggleCollapse = () => {
+    setIsCollapse(!isCollapse);
+  };
+  return (
+    <section
+      className={`${styles.sidebar} ${isCollapse ? styles.collapsed : ""}`}
+    >
+      <div className={styles.sidebarContainer}>
+        <div className={styles.logoContainer}>
+          {!isCollapse && (
+            <img src="/public/logo.png" alt="logo" className={styles.logo} />
+          )}
+        </div>
+        <ul className={styles.links}>
+          {navItems.map((item) => {
+            const { text, href, title, icon: Icon } = item;
+            return (
+              <li key={text} className={styles.lists}>
+                <a href={href} title={title}>
+                  <Icon size="26px" />
+                  {!isCollapse && text}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+        <button onClick={toggleCollapse} className={styles.collapseBtn}>
+          {isCollapse ? (
+            <MdChevronRight size="30px" />
+          ) : (
+            <MdChevronLeft size="30px" />
+          )}
+        </button>
+      </div>
+    </section>
+  );
+};
+export default Sidebar;
