@@ -9,6 +9,7 @@ import {
   MdChevronRight,
 } from "react-icons/md";
 import { navItems } from "../data/sidabar";
+import { Link, NavLink } from "react-router-dom";
 const Sidebar = () => {
   const [isCollapse, setIsCollapse] = useState(false);
   const toggleCollapse = () => {
@@ -29,10 +30,10 @@ const Sidebar = () => {
             const { text, href, title, icon: Icon } = item;
             return (
               <li key={text} className={styles.lists}>
-                <a href={href} title={title}>
+                <NavLink to={href} title={title}>
                   <Icon size="26px" />
                   {!isCollapse && text}
-                </a>
+                </NavLink>
               </li>
             );
           })}

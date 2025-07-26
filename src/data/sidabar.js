@@ -8,28 +8,28 @@ import {
 export const navItems = [
   {
     text: "Dashboard",
-    href: "#",
+    href: "/",
     title: "Dashboard",
     icon: MdSpaceDashboard,
   },
 
   {
     text: "Daily",
-    href: "#",
+    href: "/daily",
     title: "Daily",
     icon: MdToday,
   },
 
   {
     text: "Weekly",
-    href: "#",
+    href: "/weekly",
     title: "Weekly",
     icon: MdViewWeek,
   },
 
   {
     text: "Settings",
-    href: "#",
+    href: "/settings",
     title: "Settings",
     icon: MdSettings,
   },
