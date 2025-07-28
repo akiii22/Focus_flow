@@ -64,17 +64,6 @@ button {
   font-family: var(--ff-base);
 }
 
-.btn {
-  background: var(--clr-primary);
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: var(--radius-sm);
-  font-size: var(--fs-base);
-  box-shadow: var(--shadow-md);
-  transition: background 0.2s ease-in-out;
-}
-
 .btn:hover {
   background: var(--clr-primary-light);
 }

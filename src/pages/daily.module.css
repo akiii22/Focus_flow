@@ -1,0 +1,135 @@
+h1,
+h2 {
+  color: #1f2937;
+}
+
+.dailyPending,
+.formContainer,
+.timeContainer {
+  width: 300px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+.dailyContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 5rem;
+  margin-left: 2rem;
+}
+
+.dailyPending {
+  background: #a5b4fc;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.listContainer {
+  padding: 2rem 3rem;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.listContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.listContainer::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 4px;
+}
+
+.listContainer li {
+  list-style: none;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: #f3f4f6;
+  border-radius: 6px;
+  color: #1f2937;
+  font-size: 0.95rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  transition: background 0.3s;
+}
+
+.listContainer li:hover {
+  background-color: #e5e7eb;
+}
+
+.formContainer {
+  background: #a5b4fc;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+}
+
+.form input {
+  margin: 1rem 0;
+  padding: 0.8rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #ffffff;
+  transition: border-color 0.3s;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+.form .btn {
+  background: #6366f1;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  padding: 0.6rem 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form .btn:hover {
+  background: #4f46e5;
+}
+
+.timeContainer {
+  background: linear-gradient(135deg, #a5b4fc 0%, #c7d2fe 100%);
+  border-radius: 16px;
+  width: 300px;
+  text-align: center;
+  color: #1f2937;
+  padding: 2rem 1rem;
+  margin: auto 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.timeContainer:hover {
+  transform: scale(1.02);
+}
+
+.timeContainer p {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 1.5px;
+  margin: 0;
+  color: #1e293b;
+  background-color: #ffffffaa;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
