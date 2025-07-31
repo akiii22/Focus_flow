@@ -1,0 +1,37 @@
+.taskContainer {
+  background: #fcd34d;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.taskOverview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.totalTask,
+.completedTask,
+.pendingTask {
+  background: #a5b4fc;
+  padding: 1.7rem 4rem;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1f2937;
+}
+
+h3 {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: #ffff;
+}
