@@ -20,18 +20,28 @@ const Weekly = () => {
           </div>
         </div>
       </section>
-      <section>
-        <div className={styles.progressSection}>
-          <h2>Progress</h2>
-          <div className={styles.progressWrapper}>
-            <div className={styles.progressBar}>
-              <div className={styles.progressFill}></div>
-            </div>
-            <p className={styles.progressLabel}>5 / 10 tasks completed</p>
-            <p className={styles.motivation}>
-              You're doing great! Keep it up 💪
-            </p>
+      <section className={styles.weeklyInsight}>
+        <h2>Stay Consistent</h2>
+
+        <div className={styles.dayGrid}>
+          <div className={styles.dayBox}>M</div>
+          <div className={styles.dayBox}>T</div>
+          <div className={styles.dayBox}>W</div>
+          <div className={styles.dayBox}>T</div>
+          <div className={styles.dayBox}>F</div>
+          <div className={styles.dayBox}>S</div>
+          <div className={styles.dayBox}>S</div>
+        </div>
+
+        <p className={styles.motivationText}>
+          “Small steps every day lead to big results.” 💪
+        </p>
+
+        <div className={styles.progressWrapper}>
+          <div className={styles.progressBar}>
+            <div className={styles.progressFill}></div>
           </div>
+          <p className={styles.progressLabel}>5 / 10 tasks completed</p>
         </div>
       </section>
     </>

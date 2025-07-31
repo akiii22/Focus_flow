@@ -35,3 +35,70 @@ h3 {
   letter-spacing: 1px;
   color: #ffff;
 }
+
+.weeklyInsight {
+  background: #fcd34d;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.weeklyInsight h2 {
+  font-size: 1.6rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.dayGrid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.dayBox {
+  width: 35px;
+  height: 35px;
+  background-color: #d1d5db;
+  color: #1f2937;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.motivationText {
+  font-style: italic;
+  color: #4b5563;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.progressWrapper {
+  margin-top: 1rem;
+}
+
+.progressBar {
+  background-color: #e5e7eb;
+  border-radius: 8px;
+  height: 12px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.progressFill {
+  background-color: #4ade80;
+  height: 100%;
+  width: 50%;
+  transition: width 0.3s ease-in-out;
+}
+
+.progressLabel {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #1f2937;
+}
