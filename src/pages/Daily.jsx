@@ -1,15 +1,38 @@
+import { useState } from "react";
 import Time from "../components/Time";
 import styles from "./daily.module.css";
+import ItemList from "../components/ItemList";
 
-const dummyTasks = [
-  { id: 1, title: "Read 10 pages", completed: false },
-  { id: 2, title: "Journal reflection", completed: false },
-  { id: 3, title: "30-min walk", completed: false },
-];
-
-const now = new Date().toLocaleTimeString();
+// const dummyTasks = [
+//   { id: 1, title: "Read 10 pages", completed: false },
+//   { id: 2, title: "Journal reflection", completed: false },
+//   { id: 3, title: "30-min walk", completed: false },
+// ];
 
 const Daily = () => {
+  const [task, setTask] = useState("");
+  const [item, setItem] = useState([]);
+
+  const itemTask = (e) => {
+    e.preventDefault();
+    if (!task.trim()) return;
+
+    const newItems = {
+      id: Date.now(),
+      title: task,
+      completed: false,
+      date: new Date().toISOString().split("T")[0],
+    };
+    setItem([...item, newItems]);
+    setTask("");
+  };
+
+  const toggleComplete = (id) => {
+    const completedItem = item.map((task) => {
+      return task.id === id ? { ...task, completed: !task.completed } : task;
+    });
+    setItem(completedItem);
+  };
   return (
     <>
       <h1>Daily</h1>
@@ -18,17 +41,30 @@ const Daily = () => {
           <h2>Pending</h2>
           <div className={styles.listContainer}>
             <ul>
-              {dummyTasks.map((task) => {
-                const { id, title, completed } = task;
-                return <li key={id}>{title}</li>;
+              {item.map((task) => {
+                const { id, title, completed, date } = task;
+                return (
+                  <ItemList
+                    key={id}
+                    title={title}
+                    completed={completed}
+                    date={date}
+                    toggleComplete={() => toggleComplete(id)}
+                  />
+                );
               })}
             </ul>
           </div>
         </div>
         <div className={styles.formContainer}>
           <h2>Task</h2>
-          <form action="" className={styles.form}>
-            <input type="text" placeholder="Enter your task" />
+          <form action="" className={styles.form} onSubmit={itemTask}>
+            <input
+              type="text"
+              placeholder="Enter your task"
+              value={task}
+              onChange={(e) => setTask(e.target.value)}
+            />
             <button className={styles.btn}>Submit</button>
           </form>
         </div>

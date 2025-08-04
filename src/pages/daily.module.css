@@ -6,7 +6,7 @@ h2 {
 .dailyPending,
 .formContainer,
 .timeContainer {
-  width: 300px;
+  width: 350px;
   flex-shrink: 0;
   background: #ffffff;
   border-radius: 12px;
