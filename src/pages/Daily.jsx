@@ -2,6 +2,8 @@ import { useState } from "react";
 import Time from "../components/Time";
 import styles from "./daily.module.css";
 import ItemList from "../components/ItemList";
+import { useTaskContext } from "../context/context";
+import { useLocalStorageTask } from "../hooks/useLocalStorage";
 
 // const dummyTasks = [
 //   { id: 1, title: "Read 10 pages", completed: false },
@@ -11,7 +13,8 @@ import ItemList from "../components/ItemList";
 
 const Daily = () => {
   const [task, setTask] = useState("");
-  const [item, setItem] = useState([]);
+  const { tasks, dispatch } = useTaskContext();
+  useLocalStorageTask(tasks);
 
   const itemTask = (e) => {
     e.preventDefault();
@@ -23,15 +26,12 @@ const Daily = () => {
       completed: false,
       date: new Date().toISOString().split("T")[0],
     };
-    setItem([...item, newItems]);
+    dispatch({ type: "ADD_TASK", payload: newItems });
     setTask("");
   };
 
   const toggleComplete = (id) => {
-    const completedItem = item.map((task) => {
-      return task.id === id ? { ...task, completed: !task.completed } : task;
-    });
-    setItem(completedItem);
+    dispatch({ type: "TOGGLE_TASK", payload: id });
   };
   return (
     <>
@@ -41,7 +41,7 @@ const Daily = () => {
           <h2>Pending</h2>
           <div className={styles.listContainer}>
             <ul>
-              {item.map((task) => {
+              {tasks.map((task) => {
                 const { id, title, completed, date } = task;
                 return (
                   <ItemList
