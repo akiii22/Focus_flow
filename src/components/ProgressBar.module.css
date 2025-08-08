@@ -1,0 +1,24 @@
+.progressWrapper {
+  margin-top: 1rem;
+}
+
+.progressBar {
+  background-color: #e5e7eb;
+  border-radius: 8px;
+  height: 12px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.progressFill {
+  background-color: #4ade80;
+  transition: width 0.3s ease-in-out;
+}
+
+.progressLabel {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #1f2937;
+}

@@ -10,7 +10,7 @@ const TaskModal = ({ type, tasks, onClose, onDelete }) => {
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modal}>
-        <h3>{getTitle()}</h3>
+        <h3 className={styles.title}>{getTitle()}</h3>
         <button onClick={onClose} className={styles.closeBtn}>
           ×
         </button>
@@ -18,7 +18,12 @@ const TaskModal = ({ type, tasks, onClose, onDelete }) => {
           {tasks.map((task) => (
             <li key={task.id} className={styles.taskItem}>
               <span>{task.title}</span>
-              <button onClick={() => onDelete(task.id)}>🗑️</button>
+              <button
+                onClick={() => onDelete(task.id)}
+                className={styles.deleteBtn}
+              >
+                🗑️
+              </button>
             </li>
           ))}
         </ul>

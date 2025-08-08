@@ -1,0 +1,14 @@
+.motivationContainer {
+  width: 100%;
+  background: #ffff;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+.motivationText {
+  color: #4b5563;
+  font-size: 1.2rem;
+}
+
+.motivationText .author {
+  font-style: italic;
+}

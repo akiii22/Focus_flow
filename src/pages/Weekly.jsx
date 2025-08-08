@@ -2,6 +2,8 @@ import { useState } from "react";
 import TaskModal from "../components/TaskModal";
 import { useTaskContext } from "../context/context";
 import styles from "./weekly.module.css";
+import Motivation from "../components/Motivation";
+import ProgressBar from "../components/ProgressBar";
 
 const Weekly = () => {
   const { tasks, dispatch } = useTaskContext();
@@ -9,6 +11,10 @@ const Weekly = () => {
   const [showModal, setShowModal] = useState(false);
   const completedTask = tasks.filter((task) => task.completed);
   const pendingTask = tasks.filter((task) => !task.completed);
+
+  const days = ["S", "M", "T", "W", "TH", "F", "ST"];
+  const todayDate = new Date().getDay();
+  console.log(todayDate);
 
   const handleOpenModal = (type) => {
     setModalType(type);
@@ -29,6 +35,7 @@ const Weekly = () => {
     if (modalType === "completed") return completedTask;
     return [];
   };
+  console.log(modalType);
   return (
     <>
       <section className={styles.taskContainer}>
@@ -69,27 +76,24 @@ const Weekly = () => {
         <h2>Stay Consistent</h2>
 
         <div className={styles.dayGrid}>
-          <div className={styles.dayBox}>M</div>
-          <div className={styles.dayBox}>T</div>
-          <div className={styles.dayBox}>W</div>
-          <div className={styles.dayBox}>T</div>
-          <div className={styles.dayBox}>F</div>
-          <div className={styles.dayBox}>S</div>
-          <div className={styles.dayBox}>S</div>
+          {days.map((day, index) => {
+            return (
+              <div
+                key={index}
+                className={`${styles.dayBox} ${
+                  index === todayDate ? styles.currentDay : ""
+                }`}
+              >
+                {day}
+              </div>
+            );
+          })}
         </div>
-
-        <p className={styles.motivationText}>
-          “Small steps every day lead to big results.” 💪
-        </p>
-
-        <div className={styles.progressWrapper}>
-          <div className={styles.progressBar}>
-            <div className={styles.progressFill}></div>
-          </div>
-          <p className={styles.progressLabel}>
-            {completedTask.length} / {tasks.length} tasks completed
-          </p>
-        </div>
+        <Motivation />
+        <ProgressBar
+          completedTask={completedTask.length}
+          total={tasks.length}
+        />
       </section>
     </>
   );
