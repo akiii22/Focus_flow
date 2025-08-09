@@ -1,31 +1,7 @@
 :root {
-  --clr-primary: #6366f1;
-  --clr-primary-light: #a5b4fc;
-  --clr-accent: #fcd34d;
-  --clr-bg: #f9fafb;
-  --clr-text: #1f2937;
-  --clr-muted: #6b7280;
-  --clr-border: #e5e7eb;
-
   /* Font Family */
   --ff-base: "Inter", sans-serif;
   --ff-heading: "Poppins", sans-serif;
-
-  /* Font Sizes */
-  --fs-xs: 0.75rem;
-  --fs-sm: 0.875rem;
-  --fs-base: 1rem;
-  --fs-lg: 1.25rem;
-  --fs-xl: 1.5rem;
-  --fs-2xl: 2rem;
-
-  /* Border Radius */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 1rem;
-
-  /* Box Shadow */
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Reset */
