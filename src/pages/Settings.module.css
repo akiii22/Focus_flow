@@ -1,0 +1,33 @@
+.settings {
+  padding: 2rem;
+  background: #a5b4fc;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--btn-bg, #ddd);
+  font-size: 1rem;
+}
+
+.button:hover {
+  opacity: 0.8;
+}

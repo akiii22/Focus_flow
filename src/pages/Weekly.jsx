@@ -11,6 +11,7 @@ const Weekly = () => {
   const [showModal, setShowModal] = useState(false);
   const completedTask = tasks.filter((task) => task.completed);
   const pendingTask = tasks.filter((task) => !task.completed);
+  console.log(tasks);
 
   const days = ["S", "M", "T", "W", "TH", "F", "ST"];
   const todayDate = new Date().getDay();

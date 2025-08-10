@@ -34,7 +34,7 @@ const Daily = () => {
     dispatch({ type: "TOGGLE_TASK", payload: id });
   };
   return (
-    <>
+    <main className={styles.dailyMain}>
       <h1>Daily</h1>
       <section className={styles.dailyContainer}>
         <div className={styles.dailyPending}>
@@ -72,7 +72,7 @@ const Daily = () => {
           <Time />
         </div>
       </section>
-    </>
+    </main>
   );
 };
 export default Daily;

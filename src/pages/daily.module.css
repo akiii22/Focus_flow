@@ -3,6 +3,12 @@ h2 {
   color: #1f2937;
 }
 
+.dailyMain {
+  background-color: #f3f4f6;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+}
+
 .dailyPending,
 .formContainer,
 .timeContainer {
