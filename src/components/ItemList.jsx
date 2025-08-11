@@ -1,4 +1,4 @@
-import styles from "./itemList.module.css";
+import styles from "./ItemList.module.css";
 
 const ItemList = ({ title, date, completed, toggleComplete }) => {
   return (
