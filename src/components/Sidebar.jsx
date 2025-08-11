@@ -10,6 +10,7 @@ import {
 } from "react-icons/md";
 import { navItems } from "../data/sidabar";
 import { Link, NavLink } from "react-router-dom";
+import logo from "/public/logo.png";
 const Sidebar = () => {
   const [isCollapse, setIsCollapse] = useState(false);
   const toggleCollapse = () => {
@@ -21,9 +22,7 @@ const Sidebar = () => {
     >
       <div className={styles.sidebarContainer}>
         <div className={styles.logoContainer}>
-          {!isCollapse && (
-            <img src="/public/logo.png" alt="logo" className={styles.logo} />
-          )}
+          {!isCollapse && <img src={logo} alt="logo" className={styles.logo} />}
         </div>
         <ul className={styles.links}>
           {navItems.map((item) => {
