@@ -14,7 +14,7 @@ h1 {
   color: #4f46e5;
 }
 
-/* Top row for pie chart + small stat box */
+
 .topRow {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -22,7 +22,7 @@ h1 {
   align-items: stretch;
 }
 
-/* Pie chart card */
+
 .pieCard {
   background: white;
   padding: 1rem;
@@ -48,7 +48,7 @@ h1 {
   margin-top: 0.5rem;
 }
 
-/* Stat box (today's tasks) */
+
 .statBox {
   background: white;
   padding: 1rem;
@@ -70,7 +70,7 @@ h1 {
   margin-top: 0.25rem;
 }
 
-/* Heatmap section */
+
 .heatmapCard {
   background: white;
   padding: 1rem;
@@ -118,7 +118,7 @@ h1 {
   box-shadow: 0 2px 6px rgba(180, 255, 140, 0.15);
 }
 
-/* Mobile responsive */
+
 @media (max-width: 768px) {
   .topRow {
     grid-template-columns: 1fr;

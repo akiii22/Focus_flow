@@ -2,14 +2,10 @@ import { useState } from "react";
 import Time from "../components/Time";
 import styles from "./daily.module.css";
 import ItemList from "../components/ItemList";
-import { useTaskContext } from "../context/context";
+import { useTaskContext } from "../context/TaskContext";
 import { useLocalStorageTask } from "../hooks/useLocalStorage";
 
 // const dummyTasks = [
-//   { id: 1, title: "Read 10 pages", completed: false },
-//   { id: 2, title: "Journal reflection", completed: false },
-//   { id: 3, title: "30-min walk", completed: false },
-// ];
 
 const Daily = () => {
   const [task, setTask] = useState("");

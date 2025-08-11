@@ -1,4 +1,3 @@
-// pages/Settings.jsx
 import { useThemeContext } from "../context/ThemeContext";
 import styles from "./Settings.module.css";
 

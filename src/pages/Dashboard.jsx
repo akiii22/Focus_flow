@@ -1,4 +1,4 @@
-import { useTaskContext } from "../context/context";
+import { useTaskContext } from "../context/TaskContext";
 import styles from "./Dashboard.module.css";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 

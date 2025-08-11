@@ -1,6 +1,6 @@
 import { useState } from "react";
 import TaskModal from "../components/TaskModal";
-import { useTaskContext } from "../context/context";
+import { useTaskContext } from "../context/TaskContext";
 import styles from "./weekly.module.css";
 import Motivation from "../components/Motivation";
 import ProgressBar from "../components/ProgressBar";

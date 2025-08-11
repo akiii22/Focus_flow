@@ -1,10 +1,8 @@
 :root {
-  /* Font Family */
   --ff-base: "Inter", sans-serif;
   --ff-heading: "Poppins", sans-serif;
 }
 
-/* Reset */
 *,
 *::before,
 *::after {
@@ -21,7 +19,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Typography */
 h1,
 h2,
 h3,
